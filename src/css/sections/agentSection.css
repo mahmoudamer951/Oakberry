@@ -1,0 +1,132 @@
+.section-agents {
+  width: 100%;
+  padding-top: 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.agent-content {
+  margin-bottom: 10rem;
+}
+
+.section-agent-name {
+  align-self: start;
+}
+
+.background {
+  position: absolute;
+  width: 70%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: var(--secondary-gradient-color-rb);
+}
+.section-agent-name .text {
+  font-size: 2rem;
+  text-align: start;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  margin-left: 15rem;
+}
+
+.section-agent-name .heading {
+  font-size: 6.8rem;
+  text-align: start;
+  line-height: 1.4;
+  color: var(--white);
+  max-width: 100%;
+  margin: 3rem auto 10rem 15rem;
+}
+
+.agent-box {
+  width: 30rem;
+  height: 55rem;
+  background-image: var(--primary-gradient-color-rb);
+  overflow: hidden;
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow-5);
+}
+
+.agent-slide-content {
+  box-shadow: var(--shadow-6);
+  margin-bottom: 10rem;
+  height: 55rem;
+}
+
+.agent-img {
+  height: 39rem;
+  overflow: hidden;
+}
+
+.agent-box img {
+  width: 100%;
+  height: 39rem;
+  transition: all 0.4s;
+}
+
+.agent-img img:hover {
+  transform: scale(1.1);
+}
+
+.agent-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 2.4rem 2rem;
+}
+
+.agent-text span {
+  margin: 0 0.4rem 0 1rem;
+}
+
+.agent-text .name {
+  font-size: 2.2rem;
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 3rem;
+}
+
+.social .x,
+.social .facebook,
+.social .google,
+.social .instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  background-image: var(--secondary-gradient-color-b);
+  box-shadow: 0 0 2.4rem 0.5rem rgba(0, 0, 0, 0.075);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social .x:active,
+.social .facebook:active,
+.social .google:active,
+.social .instagram:active {
+  transform: scale(0.98);
+}

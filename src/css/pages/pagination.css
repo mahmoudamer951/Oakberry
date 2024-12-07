@@ -1,0 +1,65 @@
+.categories-pagination {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.categories-pagination .pagination-container {
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 5rem;
+}
+
+.categories-pagination .pagination-container li {
+  list-style: none;
+  line-height: 4.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categories-pagination .pagination-container li.numb {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  transition: all 0.2s;
+}
+
+.categories-pagination .pagination-container li.numb:active {
+  transform: scale(0.98);
+}
+
+.categories-pagination .pagination-container li.dots {
+  font-size: 2.2rem;
+  cursor: default;
+  display: contents;
+}
+
+.categories-pagination .pagination-container li.btn {
+  padding: 0 2rem;
+  text-wrap: nowrap;
+  transition: all 0.2s;
+}
+
+.categories-pagination .pagination-container li.btn:active {
+  transform: scale(0.98);
+}
+
+.categories-pagination .pagination-container li.prev {
+  border-radius: 2.5rem 0.5rem 0.5rem 2.5rem;
+}
+
+.categories-pagination .pagination-container li.next {
+  border-radius: 0.5rem 2.5rem 2.5rem 0.5rem;
+}
+
+.categories-pagination .pagination-container li.pagination-active,
+.categories-pagination .pagination-container li.numb:hover,
+.categories-pagination .pagination-container li.btn:hover {
+  background-image: var(--secondary-gradient-color-rb);
+  color: var(--white);
+}

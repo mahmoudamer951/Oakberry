@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color-lighter);
+  box-shadow: 0 0 4rem var(--primary-color-lighter-2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: var(--primary-gradient-color-rb);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--primary-color-lighter-2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color-dark);
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="shortcut icon" type="image/png" href="./src/assets/logo-3.png" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Oakberry | Real Estate Agency</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" defer src="./src/js/controller.js"></script>
+  </head>
+  <body onload="window.name='home'">
+    <header class="header">
+      <a href="#">
+        <img src="./src/assets/logo-3.png" alt="logo" class="logo" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#category" class="main-nav-link" id="category-nav">Category</a></li>
+          <li><a href="#properties" class="main-nav-link" id="properties-nav">Properties</a></li>
+          <li><a href="#video" class="main-nav-link" id="video-nav">Video</a></li>
+          <li><a href="#about" class="main-nav-link" id="about-nav">About</a></li>
+          <li><a href="#testimonial" class="main-nav-link" id="testimonial-nav">Testimonial</a></li>
+          <li><a href="#agents" class="main-nav-link" id="agents-nav">Agents</a></li>
+          <li><a href="#blog" class="main-nav-link" id="blog-nav">Blog</a></li>
+          <li><a href="#gallery" class="main-nav-link" id="gallery-nav">Gallery</a></li>
+          
+          <div class="userSigninBtn">
+        <button class="user-btn">Sign In</button>
+        </div>
+
+        <div class="userDropdownBtn hidden">
+          <div class="user-details">
+            <div class="user-photo"></div>
+            <i class="user-icon-nav fa-solid fa-user"></i>
+            <p class="user-name"></p>
+          </div>
+        <ul class="user-dropdown">
+          <li><a class="properties" onclick="location.href='myproperties.html'">My Properties</a></li>
+          <li><button class="signOut">Sign Out</button></li>
+        </ul>
+      </div>
+
+       <div class="btnNav"></div>
+      </ul>
+    </nav>
+
+       <button class="btn-mobile-nav">
+        <i class="icon-mobile-nav nav-menu fa-solid fa-bars" name="open"></i>
+        <i class="icon-mobile-nav nav-close fa-solid fa-xmark" name="close"></i>
+      </button>
+    </header>
+
+    <main>
+      <section id="hero" class="section-hero">
+          <h1 class="heading-primary">Let Your Home Be Unique & Stylist</h1>
+          <p class="hero-description">
+            A small river named Duden flows by their place and supplies it with
+            the necessary regelialia. It is a paradisematic country, in which
+            roasted parts of sentences fly into your mouth.
+          </p>
+          <button class="btn-hero">
+            <a href="#" class="btn-hero-link">Learn More &rarr;</a>
+          </button>
+      </section>
+
+      <section id="category" class="section section-category">
+        <div class="section-name">
+          <p class="text">categories</p>
+          <h1 class="heading">Explore our Categories & Places</h1>
+        </div>
+        <div class="category-container">
+          <a onclick="location.href='categories.html#land'" class="category-box" id="land">
+            <i class="icon fa-solid fa-landmark"></i>
+            <div class="text"><h2>Land</h2></div>
+          </a>
+          <a onclick="location.href='categories.html#residential'" class="category-box" id="residential">
+            <i class="icon fa-solid fa-house-chimney"></i>
+            <div class="text"><h2>Residential</h2></div>
+          </a>
+          <a onclick="location.href='categories.html#commercial'" class="category-box" id="commercial">
+            <i class="icon fa-solid fa-building"></i>
+            <div class="text"><h2>Commercial</h2></div>
+          </a>
+          <a onclick="location.href='categories.html#industrial'" class="category-box" id="industrial">
+            <i class="icon fa-solid fa-industry"></i>
+            <div class="text"><h2>Industrial</h2></div>
+          </a>
+          </div>
+        <div class="category-content">
+            <div class="category-details">
+            <h3 class="heading-details">New York</h3>
+            <div class="text-details"><div class="counter" data-target="200"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">California</h3>
+            <div class="text-details"><div class="counter" data-target="100"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Florida</h3>
+            <div class="text-details"><div class="counter" data-target="422"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">London</h3>
+            <div class="text-details"><div class="counter" data-target="100"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Tennessee</h3>
+            <div class="text-details"><div class="counter" data-target="200"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Charlotte</h3>
+            <div class="text-details"><div class="counter" data-target="200"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Chicago</h3>
+            <div class="text-details"><div class="counter" data-target="120"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Texas</h3>
+            <div class="text-details"><div class="counter" data-target="210"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Orlando</h3>
+            <div class="text-details"><div class="counter" data-target="210"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Illinois</h3>
+            <div class="text-details"><div class="counter" data-target="210"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">North Carolina</h3>
+            <div class="text-details"><div class="counter" data-target="210"></div><span>Properties</span></div>
+          </div>
+          <div class="category-details">
+            <h3 class="heading-details">Atlanta</h3>
+            <div class="text-details"><div class="counter" data-target="210"></div><span>Properties</span></div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="properties" class="section section-properties">
+        <div class="section-name">
+          <p class="text">Our Properties</p>
+          <h1 class="heading heading-message-properties">Featured Properties</h1>
+        </div>
+        <div class="properties-slide-content">
+          <div class="properties-container swiper-wrapper" id="properties-container"></div>
+        </div>
+        <div class="heading-message-property spinner">
+          <div class="spinner-icon">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+          </div>
+        </div>
+        <button class="swiper-button-prev swiperSlider-btn swiperSlider-left propertis-swiper-btn hidden"></button>
+        <button class="swiper-button-next swiperSlider-btn swiperSlider-right propertis-swiper-btn hidden"></button>
+      </section>
+
+      <section id="video" class="section section-video">
+        <div class="bg-video">
+            <video src="./src/assets/pexels-hamza-awan-17224631 (1080p).mp4" type="video/mp4" autoplay muted loop></video>
+        </div>
+
+        <div class="text">
+          <h1>Modern House Video</h1>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        </div>
+
+      </section>
+
+      <section id="about" class="section section-about">
+          <div class="image-1">
+          <img src="./src/assets/tina-witherspoon-medium.jpg" alt="">
+        </div>
+        <div class="image-2">
+          <img src="./src/assets/francesca-tosolini-2-large.jpg" alt="">
+        </div>
+        <div class="about-content">
+          <div class="about-name">
+          <p class="about-text">About US</p>
+          <h1 class="about-heading">Oakberry A Real Estate Company</h1>
+          <p class="about-p">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+        </div>
+        <div class="numbers">
+          <div class="value">
+            <div class="value-number">
+              <div class="counter" data-target="50"></div>
+            </div>
+            <p class="value-text">Years of experience</p>
+          </div>
+          <div class="value">
+            <div class="value-number">
+              <div class="counter" data-target="210"></div><span>k+</span></div>
+            <p class="value-text">Total properties</p>
+          </div>
+          <div class="value">
+            <div class="value-number">
+              <div class="counter" data-target="450"></div>
+            </div>
+            <p class="value-text">Qualified realtors</p>
+          </div>
+          <div class="value">
+            <div class="value-number">
+              <div class="counter" data-target="100"></div>
+            </div>
+            <p class="value-text">Total pranches</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section id="testimonial" class="section section-testimonial">
+        <div class="section-name">
+          <p class="text">Our Testimonial</p>
+          <h1 class="heading">Recent Testimonial</h1>
+        </div>
+        
+        <div class="testimonial-container">
+        <div class="testimonial-content">
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-1.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-2.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-3.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-4.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-5.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="testimonial-box">
+          <div class="testimonial">
+          <p class="quate"></p>
+          <p class="text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <div class="client">
+            <img src="./src/assets/customer-6.jpg" alt="">
+            <div class="client-text">
+              <p class="name">Roger Scott</p>
+              <p class="title">Marketing Manager</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <button class="slider-btn testimonial-btn-left"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn testimonial-btn-right"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="dots"></div>
+      </section>
+
+      <section id="agents" class="section section-agents">
+        <div class="background"></div>
+        <div class="section-agent-name">
+          <p class="text">Meets our agents</p>
+          <h1 class="heading">Our Agents</h1>
+        </div>
+        <div class="agent-slide-content">
+          <div class="agent-content swiper-wrapper">
+            <div class="agent-box swiper-slide">
+              <div class="agent-img">
+              <img src="./src/assets/team-1.jpg" alt="">
+              </div>
+                <div class="agent-text">
+                  <p class="achievement">listing<span>10</span>Properties</p>
+                  <p class="name">Mike Bochs</p>
+                  <div class="social">
+                    <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="google"><i class="fa-brands fa-google"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+                </div>
+            </div>
+            <div class="agent-box swiper-slide">
+              <div class="agent-img">
+                <img src="./src/assets/team-2.jpg" alt="">
+              </div>
+              <div class="agent-text">
+                  <p class="achievement">listing<span>10</span>Properties</p>
+                  <p class="name">Mike Bochs</p>
+                  <div class="social">
+                    <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="google"><i class="fa-brands fa-google"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+                </div>
+            </div>
+            <div class="agent-box swiper-slide">
+              <div class="agent-img">
+                <img src="./src/assets/team-3.jpg" alt="">
+              </div>
+                <div class="agent-text">
+                  <p class="achievement">listing<span>10</span>Properties</p>
+                  <p class="name">Mike Bochs</p>
+                  <div class="social">
+                    <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="google"><i class="fa-brands fa-google"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+                </div>
+            </div>
+            <div class="agent-box swiper-slide">
+              <div class="agent-img">
+              <img src="./src/assets/team-4.jpg" alt="">
+              </div>
+                <div class="agent-text">
+                  <p class="achievement">listing<span>10</span>Properties</p>
+                  <p class="name">Mike Bochs</p>
+                  <div class="social">
+                    <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="google"><i class="fa-brands fa-google"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+                </div>
+            </div>
+            <div class="agent-box swiper-slide">
+              <div class="agent-img">
+              <img src="./src/assets/team-1.jpg" alt="">
+              </div>
+                <div class="agent-text">
+                  <p class="achievement">listing<span>10</span>Properties</p>
+                  <p class="name">Mike Bochs</p>
+                  <div class="social">
+                    <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="google"><i class="fa-brands fa-google"></i></div>
+                    <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-swipe-agents hidden">
+           <i class="fa-solid fa-arrow-left"></i>
+           <i class="fa-regular fa-hand-point-up hand"></i>
+           <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <button class="swiper-button-prev swiperSlider-btn swiperSlider-left agent-swiper-btn"></button>
+        <button class="swiper-button-next swiperSlider-btn swiperSlider-right agent-swiper-btn"></button>
+      </section>
+
+      <section id="blog" class="section section-blog">
+        <div class="section-name">
+          <p class="text">our blog</p>
+          <h1 class="heading">Recent Blog</h1>
+        </div>
+        <div class="blog-slide-content">
+          <div class="blog-content swiper-wrapper">
+            <div class="blog-box swiper-slide">
+              <div class="blog-img">
+              <img src="./src/assets/image_1.jpg" alt="">
+              </div>
+              <div class="blog-text">
+                <div class="achievement">
+                    <span>Admin</span>
+                    <span>DEC. 01, 2020</span>
+                    <div class="Comments"><span>3</span>Comments</div>
+                </div>
+                <p class="blog-heading">New Home Sales Picked Up in December</p>
+                <p class="text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>          
+            <div class="blog-box swiper-slide">
+              <div class="blog-img">
+              <img src="./src/assets/image_2.jpg" alt="">
+              </div>
+                <div class="blog-text">
+                  <div class="achievement">
+                    <span>Admin</span>
+                    <span>DEC. 01, 2020</span>
+                    <div class="Comments"><span>3</span>Comments</div>
+                </div>
+                <p class="blog-heading">New Home Sales Picked Up in December</p>
+                <p class="text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>          
+            <div class="blog-box swiper-slide">
+              <div class="blog-img">
+              <img src="./src/assets/image_3.jpg" alt="">
+                </div>
+                <div class="blog-text">
+                  <div class="achievement">
+                    <span>Admin</span>
+                    <span>DEC. 01, 2020</span>
+                  <div class="Comments"><span>3</span>Comments</div>
+                </div>
+                  <p class="blog-heading">New Home Sales Picked Up in December</p>
+                  <p class="text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+            </div>          
+            <div class="blog-box swiper-slide">
+              <div class="blog-img">
+              <img src="./src/assets/image_4.jpg" alt="">
+              </div>
+                <div class="blog-text">
+                  <div class="achievement">
+                    <span>Admin</span>
+                    <span>DEC. 01, 2020</span>
+                    <div class="Comments"><span>3</span>Comments</div>
+                </div>
+                  <p class="blog-heading">New Home Sales Picked Up in December</p>
+                  <p class="text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+            </div>
+            <div class="blog-box swiper-slide">
+              <div class="blog-img">
+              <img src="./src/assets/image_1.jpg" alt="">
+              </div>
+              <div class="blog-text">
+                <div class="achievement">
+                    <span>Admin</span>
+                    <span>DEC. 01, 2020</span>
+                    <div class="Comments"><span>3</span>Comments</div>
+                </div>
+                <p class="blog-heading">New Home Sales Picked Up in December</p>
+                <p class="text">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>           
+          </div>
+        </div>
+        <div class="arrow-swipe-blog hidden">
+           <i class="fa-solid fa-arrow-left"></i>
+           <i class="fa-regular fa-hand-point-up hand"></i>
+           <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <button class="swiper-button-prev swiperSlider-btn swiperSlider-left blog-swiper-btn"></button>
+        <button class="swiper-button-next swiperSlider-btn swiperSlider-right blog-swiper-btn"></button>
+      </section>
+
+      <section id="gallery" class="section section-gallery">
+        <div class="section-name">
+          <p class="text">our gallery</p>
+          <h1 class="heading">Recent Properties</h1>
+        </div>
+        <div class="heading-message-property gallery-spinner">
+          <div class="spinner-icon">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+          </div>
+        </div>
+      </section>
+      
+      <div id="footer" class="section-footer">
+        <div class="footer-container">
+        <div class="footer-content">
+          <a href="#">
+            <img src="./src/assets/logo-3.png" alt="logo" class="logo" />
+          </a>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+          <div class="footer-social">
+            <div class="x"><i class="fa-brands fa-x-twitter"></i></div>
+            <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="google"><i class="fa-brands fa-google"></i></div>
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+        </div>
+        <div class="footer-address">
+          <p class="footer-header">Have a Questions?</p>
+          <ul>
+            <li>
+              <p class="address"><i class="fa-solid fa-map address-icon"></i> 203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <a href="#"><i class="fa-solid fa-phone address-icon"></i> +2 012 3456 789</a>
+              <a href="#"><i class="fa-sharp fa-solid fa-paper-plane address-icon"></i> info@yourdomain.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <p class="footer-header">Offers</p>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Properties</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Agents</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Locations</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Clients Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <p class="footer-header">Company</p>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Home</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> About</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Blog</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <p class="footer-header">Quick Links</p>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Terms & Conditions</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> User's Guide</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Support Center</a>
+              <a href="#"><i class="fa-solid fa-angle-right"></i> Press Info</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>Copyright &copy;<span class="current-year"></span> All rights reserved | This template from Colorlib, but redesign and made with <i class="fa-solid fa-heart"></i> by me.</p>
+      </div>
+      </div>
+      
+      <div class="map-box hidden">
+        <button class="close-map"><i class="fa-solid fa-xmark" name="close"></i></button>
+        <div class="details" id="details"></div>
+      </div>
+      <div class="map-overlay hidden"></div>
+
+      <div class="add-property hidden">
+        <button class="close-add-property"><i class="fa-solid fa-xmark" name="close"></i></button>
+        <h2 class="property-details">Add Property Details</h2>
+        <form class="property-form" onkeypress="return event.keyCode != 13">
+          <button class="add-images">Add Images</button>
+          <div class="images">
+            <div class="add-img" id="img-1">
+              <input class="file-input img-1-input" type="file" name="image1" id="img-1-file" accept="image/*" >
+              <label class="file-label img-1-label" for="img-1-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-1-trash"></i>
+            </div>
+            <div class="add-img" id="img-2">
+              <input class="file-input img-2-input" type="file" name="image2" id="img-2-file" accept="image/*" >
+              <label class="file-label img-2-label" for="img-2-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-2-trash"></i>
+            </div>
+            <div class="add-img" id="img-3">
+              <input class="file-input img-3-input" type="file" name="image3" id="img-3-file" accept="image/*" >
+              <label class="file-label img-3-label" for="img-3-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-3-trash"></i>
+            </div>
+            <div class="add-img" id="img-4">
+              <input class="file-input img-4-input" type="file" name="image4" id="img-4-file" accept="image/*" >
+              <label class="file-label img-4-label" for="img-4-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-4-trash"></i>
+            </div>
+            <div class="add-img" id="img-5">
+              <input class="file-input img-5-input" type="file" name="image5" id="img-5-file" accept="image/*" >
+              <label class="file-label img-5-label" for="img-5-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-5-trash"></i>
+            </div>
+            <div class="add-img" id="img-6">
+              <input class="file-input img-6-input" type="file" name="image6" id="img-6-file" accept="image/*" >
+              <label class="file-label img-6-label" for="img-6-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-6-trash"></i>
+            </div>
+            <div class="add-img" id="img-7">
+              <input class="file-input img-7-input" type="file" name="image7" id="img-7-file" accept="image/*" >
+              <label class="file-label img-7-label" for="img-7-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-7-trash"></i>
+            </div>
+            <div class="add-img" id="img-8">
+              <input class="file-input img-8-input" type="file" name="image8" id="img-8-file" accept="image/*" >
+              <label class="file-label img-8-label" for="img-8-file" id="file">
+                <i class="fa-solid fa-image image"></i>
+              </label>
+              <i class="fa-solid fa-trash-can trash hidden" id="img-8-trash"></i>
+            </div>
+          </div> 
+          <div class="property-form-group">
+          <div class="form-group">
+            <input class="form-input" type="text" placeholder="Title" name="propertyName" id="title" required autocomplete="off">
+            <label class="form-label" for="title">Title</label>
+          </div>
+          <div class="form-group">
+            <input class="form-input" type="number" placeholder="Price" name="price" id="price" required autocomplete="off">
+            <label class="form-label" for="price">Price</label>
+          </div>
+          <div class="form-group">
+            <input class="form-input" type="text" placeholder="Country" name="country" id="country" required autocomplete="off">
+            <label class="form-label" for="country">Country</label>
+          </div>
+          <div class="form-group form-group-1">
+            <div class="form-radio-group-1">
+              <input class="form-radio-input" type="radio" name="purpose" value="Sale" id="saleBtn" required>
+              <label class="form-radio-label radio-label-1" for="saleBtn"><span class="form-radio-button"></span>Sale</label>
+            </div>
+            <div class="form-radio-group-1">
+              <input class="form-radio-input" type="radio" name="purpose" value="Rent" id="rentBtn" required>
+              <label class="form-radio-label radio-label-1" for="rentBtn"><span class="form-radio-button"></span>Rent</label>
+            </div>
+          </div>
+          <div class="form-group region-location">
+            <div class="form-region">
+              <input class="form-input form-input-region" type="text" placeholder="Region" name="region" id="region" required autocomplete="off">
+              <label class="form-label" for="region">Region</label>
+            </div>
+            <div class="form-location">
+              <div class="chose-on-map"><i class="fa-solid fa-location-dot location-dot"></i></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-room-bathroom">
+              <input class="form-input" type="number" placeholder="Rooms" name="room" id="rooms" required autocomplete="off">
+              <label class="form-label" for="rooms">Rooms</label>
+            </div>
+            <div class="form-room-bathroom">
+              <input class="form-input" type="number" placeholder="Bathroom" name="bathroom" id="bathroom" required autocomplete="off">
+              <label class="form-label" for="bathroom">Bathroom</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <input class="form-input" type="number" placeholder="Area" name="space" id="aria" required autocomplete="off">
+            <label class="form-label" for="aria">Area</label>
+          </div>
+          <div class="form-group form-group-2">
+            <div class="form-radio-group-2">
+              <input class="form-radio-input" type="radio" name="type" value="Land" id="landBtn" required>
+              <label class="form-radio-label radio-label-2" for="landBtn"><span class="form-radio-button"></span>Land</label>
+            </div>
+            <div class="form-radio-group-2">
+              <input class="form-radio-input" type="radio" name="type" value="Residential" id="residentBtn" required>
+              <label class="form-radio-label radio-label-2" for="residentBtn"><span class="form-radio-button"></span>Residential</label>
+            </div>
+            <div class="form-radio-group-2">
+              <input class="form-radio-input" type="radio" name="type" value="Commercial" id="commercialBtn" required>
+              <label class="form-radio-label radio-label-2" for="commercialBtn"><span class="form-radio-button"></span>Commercial</label>
+            </div>
+            <div class="form-radio-group-2">
+              <input class="form-radio-input" type="radio" name="type" value="Industrial" id="industrialBtn" required>
+              <label class="form-radio-label radio-label-2" for="industrialBtn"><span class="form-radio-button"></span>Industrial</label>
+            </div>
+          </div>
+        </div>  
+        <div class="form-group location-group hidden-location">
+          <div class="close-location"><i class="fa-solid fa-xmark" name="close"></i></div>
+          <div class="location-map-btn">
+            <div class="search-group">
+              <input
+                type="text"
+                class="location-search-input"
+                id="searchInput"
+                name="search"
+                placeholder="Search Location" autocomplete="off" />
+              <div class="location-search-button">
+                <i class="search-button fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+            <div class="btn-group">
+              <div class="current-location">Current location</div>
+              <div class="clear-location">Clear</div>
+              <div class="cancel-location">Cancel</div>
+            <div class="ok-location">Ok</div>
+              </div>
+          </div>
+          <div class="location-container"></div>
+        </div>
+        <div class="map-overlay-inside hidden"></div>
+        <button type="submit" class="add-property-btn submit-hidden">Submit</button>
+          <div class="form-group form-group-details">
+            <div class="add-details hidden-add-details">
+              <textarea class="text-area" placeholder="Write more details..." name="description" id="description" required tabindex="-1"></textarea>
+              <div class="text-area-arrow">
+                <i class="add-up fa-solid fa-angle-up"></i>
+                <i class="add-down fa-solid fa-angle-down hidden-add-arrow"></i>
+              </div>
+            </div>
+          </div>
+      </form>
+      </div>
+      <div class="add-pro-overlay hidden"></div>
+      
+      <div class="user-login hidden">
+        <button class="close-user-login"><i class="fa-solid fa-xmark" name="close"></i></button>
+        <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+        <input type="text" name="userName" class="userName" placeholder="User Name" required autocomplete="off">
+        <div class="password-group">
+          <input type="text" name="password" class="password" placeholder="Password" required autocomplete="off">
+          <i class="hide-password fa-solid fa-eye-slash"></i>
+          <i class="show-password  fa-solid fa-eye hidden"></i>
+        </div>
+        <p class="incorect-user-pass hidden">Username or password incorect!</p>
+          <div class="keep-login-group">
+          <input type="checkbox" name="keepLogin" class="keep-login" id="keepLogin">
+          <label for="keepLogin">Remember me</label>
+        </div>
+        <button class="login-btn">log in</button>
+        <a href="#" class="sign-up">sign up</a>
+      </div>
+      <div class="user-login-overlay hidden"></div>
+
+      <div class="popup-guide guide-hidden">
+        <p class="popup-guide-message">Hello there 🤗 Sign in with  <br> 👉 <strong>username:</strong> amer <br> 👉 <strong>passwoord:</strong> 1111<br> to see all features.</p>
+        <button class="popup-guide-btn">Done</button>
+      </div>
+
+      <div class="message-popup-incorrect message-popup hidden">
+      <p class="error-message"></p>
+      <button class="incorrect-done-btn">Done</button>
+    </div>
+
+      <div class="message-popup-success message-popup hidden">
+        <div class="message-mark success-mark">
+        <i class="fa-regular fa-circle-check"></i>
+      </div>
+      <p class="success-message"></p>
+    </div>
+    
+    <div class="message-overlay hidden"></div>
+
+    </main>
+  </body>
+</html>

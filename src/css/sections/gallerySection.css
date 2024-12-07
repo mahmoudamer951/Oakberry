@@ -1,0 +1,23 @@
+.section-gallery {
+  padding: 10rem 0;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.gallery {
+  position: relative;
+  background-color: var(--white);
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

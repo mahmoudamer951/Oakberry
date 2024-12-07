@@ -1,0 +1,146 @@
+.section-testimonial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: var(--primary-color-lighter);
+  padding: 5rem 0;
+  transition: all 1s ease;
+}
+
+.testimonial-container {
+  overflow: hidden;
+  width: 75%;
+  box-shadow: var(--shadow-13);
+  border-radius: 0.9rem;
+}
+
+.testimonial-content {
+  width: 100%;
+  display: -webkit-box;
+  transform: translateX(0);
+  will-change: transform;
+  user-select: none;
+  cursor: grab;
+}
+
+.testimonial-box {
+  height: 30rem;
+  background-color: var(--white);
+}
+
+.testimonial {
+  width: 100%;
+}
+
+.testimonial-box .quate {
+  position: relative;
+  top: 2.25rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  background-image: var(--primary-gradient-color-rb);
+}
+
+.testimonial-box .quate::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.2rem;
+  left: 0.2rem;
+  line-height: 1;
+  font-size: 9rem;
+  color: var(--white);
+}
+
+.testimonial-box .text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 4rem 3rem 2rem 3rem;
+}
+
+.testimonial-box img {
+  width: 4.8rem;
+  border-radius: 50%;
+}
+
+.client {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+.client-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.client .name {
+  font-size: 1.8rem;
+  color: var(--primary-font-light);
+}
+
+.client .title {
+  font-size: 1rem;
+  color: var(--primary-color-light);
+  text-transform: uppercase;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 55%;
+  z-index: 1;
+  border: none;
+  font-family: inherit;
+  color: var(--primary-color-light);
+  height: 0rem;
+  font-size: 4rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+}
+
+.slider-btn:hover {
+  color: var(--secondary-color-dark);
+}
+
+.testimonial-btn-left {
+  left: 8%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonial-btn-right {
+  right: 8%;
+  transform: translate(50%, -50%);
+}
+
+.dots-dot {
+  box-shadow: var(--shadow-2);
+  border: none;
+  background-color: var(--primary-color-light);
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots-dot:last-child {
+  margin: 0;
+}
+
+.dots-dot-active {
+  background-image: var(--primary-gradient-color-rb);
+  opacity: 1;
+}

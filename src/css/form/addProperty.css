@@ -1,0 +1,626 @@
+.add-property,
+.update-property {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: fit-content;
+  background-color: var(--color-lighter);
+  padding: 2rem 6rem;
+  box-shadow: var(--shadow-3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 5;
+  user-select: none;
+}
+
+.add-images {
+  text-transform: capitalize;
+  background-image: var(--primary-gradient-color-rb);
+  color: var(--white);
+  padding: 1rem 2rem;
+  margin-top: -0.5rem;
+  border-radius: 0.9rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: none;
+  transition: all 0.2s;
+}
+
+.add-images:active {
+  transform: scale(0.98);
+}
+
+.categories-header,
+.property-details {
+  font-size: 3rem;
+  text-align: center;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.property-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.property-form .images {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.property-form .property-form-group {
+  display: inline-block;
+  column-count: 2;
+  column-gap: 4rem;
+  width: 100%;
+  margin: 0 3rem 3rem 3rem;
+}
+
+.property-form .location-group {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 85%;
+  height: 70%;
+  position: absolute;
+  background-color: var(--primary-color-lighter);
+  border-radius: 0.9rem;
+}
+
+.property-form .property-form-group .form-input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--primary-color-light);
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  background-color: var(--white);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.property-form .property-form-group .form-input::placeholder {
+  color: var(--primary-font-light);
+}
+
+.property-form .property-form-group .form-input:focus:invalid {
+  border-bottom: 3px solid var(--yellow-3);
+}
+
+.property-form .property-form-group .form-input:focus {
+  outline: none;
+  -webkit-box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-1);
+  border-bottom: 3px solid var(--primary-color-light);
+}
+
+.property-form .property-form-group .form-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.4rem 0 0.6rem 2rem;
+  color: var(--primary-color-light);
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.property-form
+  .property-form-group
+  .form-group
+  .form-input:placeholder-shown
+  + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+.property-form .add-property-btn,
+.property-form .update-property-btn {
+  text-transform: capitalize;
+  background-image: var(--primary-gradient-color-rb);
+  color: var(--white);
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 0.9rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.property-form .add-property-btn:active,
+.property-form .update-property-btn:active {
+  transform: scale(0.98);
+}
+
+.add-property-btn:focus,
+.update-property-btn:focus {
+  outline: none;
+}
+
+.property-form .add-property-btn:hover,
+.property-form .update-property-btn:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.property-form .file-input {
+  opacity: 0;
+}
+
+.property-form .file-label .image {
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  border: none;
+  cursor: pointer;
+}
+
+.property-form .images .trash {
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: 100;
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.property-form .images .add-img {
+  position: relative;
+  overflow: hidden;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid var(--primary-color-light);
+  border-radius: 0.5rem;
+}
+
+.property-form .images .add-img .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.property-form .images .add-img .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form-room-bathroom,
+.form-radio-group-1 {
+  width: 49%;
+  display: inline-block;
+}
+
+.form-radio-group-1 {
+  margin-top: 1rem;
+}
+
+.form-radio-group-2 {
+  width: 49%;
+  display: inline-block;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.form-radio-input {
+  opacity: 0;
+}
+
+.form-radio-label {
+  font-size: 1.6rem;
+  color: var(--primary-font-light);
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-label-1 {
+  padding-left: 4.5rem;
+}
+
+.radio-label-2 {
+  padding-left: 4.5rem;
+  display: block;
+}
+
+.form-group-1,
+.form-group-2 {
+  height: 4rem;
+}
+
+.form-radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid transparent;
+  background: linear-gradient(var(--color-lighter), var(--color-lighter))
+      padding-box,
+    var(--primary-gradient-color-rb) border-box;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+.form-radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: var(--primary-gradient-color-rb);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1;
+}
+
+.add-details {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  position: absolute;
+  width: 89%;
+  height: 100%;
+  top: 37%;
+  transition: transform 1s;
+  z-index: 1;
+}
+
+.hidden-add-details {
+  transform: translateY(62%);
+}
+
+.text-area {
+  width: 100%;
+  height: 26.4rem;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 0;
+  border: none;
+  padding: 2rem 1rem;
+  background-color: var(--whiteColor-4);
+  font-size: 2rem;
+  outline: none;
+  resize: none;
+  color: var(--primary-color-light);
+  font-weight: bold;
+}
+
+.text-area:focus {
+  cursor: text;
+}
+
+.text-area-arrow {
+  width: 100%;
+  height: 1.6rem;
+  background-image: var(--primary-gradient-color-b);
+  transform: translateX(-50%);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.text-area-arrow:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.text-area-arrow i {
+  font-size: 2rem;
+  position: absolute;
+  color: var(--primary-color-lighter);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden-add-arrow {
+  display: none;
+}
+
+.region-location {
+  position: relative;
+}
+
+.form-region {
+  width: 100%;
+  display: inline-block;
+}
+
+.form-input-region {
+  padding-right: 4rem !important;
+}
+
+.form-location {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.chose-on-map {
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.chose-on-map:hover {
+  color: var(--secondary-color-dark);
+}
+
+.ok-location,
+.clear-location,
+.cancel-location,
+.current-location {
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 0.5rem;
+  background-image: var(--primary-gradient-color-rb);
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ok-location:active,
+.clear-location:active,
+.cancel-location:active,
+.current-location:active {
+  transform: scale(0.98);
+}
+
+.current-location {
+  right: 14rem;
+}
+
+.btn-group {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-group {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-search-input {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: inherit;
+  background-color: var(--white);
+  border: 1px solid var(--primary-color-light);
+  padding: 0.1rem 3rem 0.1rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  box-shadow: var(--shadow-4);
+}
+
+.ok-location:hover,
+.clear-location:hover,
+.cancel-location:hover,
+.current-location:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.location-search-input::placeholder {
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.location-search-button {
+  position: absolute;
+  right: 1rem;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.location-search-button:active {
+  transform: scale(0.98);
+}
+
+.close-location {
+  font-family: inherit;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+}
+
+.location-map-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 85%;
+  top: 5rem;
+  gap: 1rem;
+  text-wrap: nowrap;
+}
+
+.location-map {
+  width: 100%;
+  height: 100% !important;
+}
+.location-container {
+  position: absolute;
+  border-radius: 0.9rem;
+  width: 95%;
+  height: 75%;
+  bottom: 1rem;
+}
+
+.hidden-location {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.user-login-overlay,
+.update-pro-overlay,
+.map-overlay-inside,
+.add-pro-overlay,
+.message-overlay,
+.nav-overlay,
+.map-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 4;
+  transition: all 0.5s;
+}
+
+.nav-overlay {
+  z-index: 3;
+}
+
+.map-overlay-inside {
+  z-index: 4;
+}
+
+.message-overlay {
+  z-index: 5;
+}
+
+.close-add-property,
+.close-update-property {
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.close-add-property:active,
+.close-update-property:active {
+  transform: scale(0.98);
+}
+
+.close-user-login,
+.close-add-property,
+.close-update-property,
+.delete-message-close,
+.incorrect-message-close,
+.close-map {
+  font-family: inherit;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.close-user-login:active,
+.close-add-property:active,
+.close-update-property:active,
+.delete-message-close:active,
+.incorrect-message-close:active,
+.close-images:active,
+.close-map:active {
+  transform: scale(0.98);
+}
+
+.submit-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.guide-hidden {
+  display: none;
+  visibility: hidden;
+}

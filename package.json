@@ -1,0 +1,16 @@
+{
+  "name": "oakberry-vanilla-oop---final",
+  "version": "1.0.0",
+  "description": "real estate agency",
+  "default": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "build": "parcel build index.html categories.html myproperties.html --dist-dir ./dist"
+  },
+  "author": "mahmoud amer",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "parcel": "^2.12.0"
+  }
+}

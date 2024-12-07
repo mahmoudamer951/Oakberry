@@ -1,0 +1,131 @@
+@import "./../css/sections/header.css";
+@import "./../css/sections/heroSection.css";
+@import "./../css/sections/categoriesSection.css";
+@import "./../css/pages/categoryPage.css";
+@import "./../css/pages/myPropertyPage.css";
+@import "./../css/pages/pagination.css";
+@import "./../css/sections/propertiesSection.css";
+@import "./../css/sections/propertyPopup.css";
+@import "./../css/sections/videoSection.css";
+@import "./../css/sections/aboutSection.css";
+@import "./../css/sections/testimonialSection.css";
+@import "./../css/sections/agentSection.css";
+@import "./../css/sections/blogSection.css";
+@import "./../css/sections/gallerySection.css";
+@import "./../css/sections/footer.css";
+@import "./../css/form/addProperty.css";
+@import "./scrollDesign.css";
+@import "./queries.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--primary-font-light);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  color: var(--white);
+  background: var(--primary-color-light);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--primary-color-light);
+}
+
+/* //////////////////////// */
+/* COLOR VARIABLE */
+/* //////////////////////// */
+:root {
+  --greenColor-2: #5ea51d;
+  --greenColor-3: #4f8a18;
+  --whiteColor-4: #f7f7f7de;
+  /* ////////// -COLOR- ////////// */
+  --white: #fff;
+  --lighter: #ffffff80;
+
+  --lime-light: #fbfff4;
+
+  --lime-1: #f4fce3;
+
+  --lime-4: #66a80f;
+
+  --yellow-3: #f08c00;
+
+  --red-2: #e03131;
+  --red-3: #c92a2a;
+
+  --grey-1: #f1f3f5;
+  --grey-4: #adb5bd;
+  --grey-6: #495057;
+  --blue-1: #081536;
+  --blue-2: #050d21;
+
+  --color-lighter: #f4fce3;
+
+  --color-line: #c9a7585c;
+
+  --primary-color-lighter-2: #f4fce3;
+  --primary-color-lighter: #fbfff4;
+  --primary-color-light: #5c940d;
+  --primary-color-dark: #37561e;
+
+  --primary-color-light-2: rgb(92, 148, 13, 0.5);
+
+  --secondary-color-light: #091533;
+  --secondary-color-dark: #4f8a18;
+
+  --primary-font-lighter: #9d9e99;
+  --primary-font-light: #555;
+  --primary-font-dark: #333;
+
+  --primary-gradient-color-rb: linear-gradient(
+    to right bottom,
+    #67af00,
+    #285600
+  );
+  --primary-gradient-color-b: linear-gradient(to bottom, #67af00, #285600);
+  --primary-gradient-color-rb-red: linear-gradient(
+    to right bottom,
+    #f20000,
+    #600000
+  );
+  --secondary-gradient-color-rb: linear-gradient(
+    to right bottom,
+    #011136,
+    #00091e
+  );
+  --secondary-gradient-color-b: linear-gradient(to bottom, #011136, #00091e);
+
+  /* --shadow-1: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1); */
+  /* --shadow-2: 0px 0rem 3rem 1rem rgba(0, 0, 0, 0.1); */
+  --shadow-1: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 0 2.4rem 0.5rem rgba(0, 0, 0, 0.075);
+  --shadow-3: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-4: 0 3rem 3rem rgba(0, 0, 0, 0.05);
+  --shadow-5: 12rem 0 5rem 2rem rgba(0, 0, 0, 0.075);
+  --shadow-6: 0rem 0rem 2.4rem 1rem rgba(0, 0, 0, 0.075);
+  --shadow-7: 0 0 2.4rem rgba(0, 0, 0, 0.1);
+  --shadow-8: 0 0 1rem 1rem rgba(0, 0, 0, 0.12);
+  --shadow-9: 0 0 2.4rem rgba(0, 0, 0, 0.4);
+  --shadow-10: 0rem 0rem 3rem 1rem rgba(0, 0, 0, 0.05);
+  --shadow-11: 0 0rem 2rem 0rem rgba(0, 0, 0, 0.1);
+  --shadow-12: 0rem 0rem 2rem 0.1rem rgba(0, 0, 0, 0.1);
+  --shadow-13: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.075);
+  --shadow-14: 0 0 2.2rem 1.2rem rgba(0, 0, 0, 0.075);
+}

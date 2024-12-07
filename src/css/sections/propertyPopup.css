@@ -1,0 +1,259 @@
+.proImg-popup {
+  width: 100%;
+  height: 15rem;
+}
+
+.owner-popup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.3rem 0;
+}
+
+.owner-group-popup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name-popup,
+.date-add-popup {
+  font-size: 1.2rem;
+  color: var(--primary-font-light);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.pro-name-popup {
+  font-size: 2rem;
+  color: var(--primary-font-light);
+}
+
+.properties-content-popup {
+  user-select: none;
+}
+
+.properties-content-popup img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.properties-details-popup .pro-location-popup {
+  font-size: 1.4rem;
+  color: var(--primary-color-light);
+}
+
+.properties-details-popup .purpose-popup {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  color: var(--popuphite);
+  margin-left: 2rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+.properties-details-popup .pro-location-popup {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.properties-details-popup .country-popup {
+  font-size: 1.2rem;
+  background-image: var(--primary-gradient-color-rb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  text-wrap: nowrap;
+}
+
+.properties-details-popup .price-purpose-popup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  color: var(--primary-font-light);
+}
+
+.properties-details-popup .price-popup {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-font-light);
+}
+
+.properties-details-popup .purpose-popup {
+  color: var(--white);
+}
+
+.properties-details-popup .Sale-popup {
+  background-image: var(--primary-gradient-color-rb);
+}
+.properties-details-popup .Rent-popup {
+  background-image: linear-gradient(to right bottom, #f20000, #600000);
+}
+
+.more-details-popup {
+  position: relative;
+  transition: transform 1s;
+}
+
+.description-area-popup {
+  width: 100%;
+  height: 25.1rem;
+  position: relative;
+  bottom: 23.7rem;
+  border: none;
+  padding: 2rem 1rem;
+  background-color: var(--primary-color-lighter);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  outline: none;
+  resize: none;
+  transform: translateY(0rem);
+  color: var(--primary-font-light);
+  font-weight: bold;
+  overflow-y: scroll;
+}
+
+.description-header-popup {
+  width: 100%;
+  height: 1.6rem;
+  background-image: var(--primary-gradient-color-b);
+  top: -91%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+}
+
+.description-header-popup:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.properties-details-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  color: var(--primary-font-light);
+  margin: 2.1rem;
+}
+
+.pro-details-popup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.pro-details-group-popup {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrowDetails-popup {
+  font-size: 2rem;
+  position: absolute;
+  color: var(--primary-color-lighter);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden-details-popup {
+  transform: translateY(22rem);
+}
+
+.map-box {
+  width: 75%;
+  height: fit-content;
+  background-color: var(--primary-color-lighter);
+  box-shadow: var(--shadow-2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  transition: all 0.5s;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  gap: 4rem;
+  padding: 5rem;
+}
+
+.map-hidden {
+  display: none;
+}
+
+.map-box .map {
+  width: 100%;
+  height: 38.4rem;
+
+  grid-column: 1 / span 1;
+  border-radius: 8px;
+  box-shadow: var(--shadow-14);
+}
+
+.map-box .details {
+  width: 100%;
+  height: 38.4rem;
+
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow-14);
+}
+
+/* custom popup in leaflet map */
+.leaflet-popup-tip,
+.leaflet-popup-content-wrapper {
+  background-color: var(--lighter) !important;
+}
+.header-popup-in-map {
+  background-image: linear-gradient(
+    to right bottom,
+    #67af00,
+    #285600
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  text-align: center !important;
+  margin-bottom: 0.5rem !important;
+  text-transform: capitalize !important;
+}
+.img-popup-in-map {
+  border-radius: 0.9rem !important;
+  width: 20rem !important;
+}
+.leaflet-popup-close-button {
+  position: absolute !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  background-image: linear-gradient(
+    to right bottom,
+    #67af00,
+    #285600
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+.leaflet-popup-close-button:hover {
+  color: var(--secondary-color-dark) !important;
+}

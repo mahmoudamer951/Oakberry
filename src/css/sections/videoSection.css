@@ -1,0 +1,35 @@
+.section-video {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
+}
+
+.bg-video video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.section-video .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.section-video .text h1 {
+  font-size: 6rem;
+  color: var(--primary-color-lighter);
+  margin-bottom: 2rem;
+}
+
+.section-video .text p {
+  font-size: 3.2rem;
+  color: var(--primary-font-lighter);
+  line-height: 1.4;
+}
